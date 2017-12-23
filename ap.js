@@ -1,7 +1,7 @@
 const express = require('express');
 
 const app=express();
-app.use(express.static("partials/"));
+app.use(express.static("views/partials/"));
 app.get('/',(req,res)=>res.send('Hi there, welcome to my assignment!'))
 
 app.get("/file/:thing", function(req,res){
