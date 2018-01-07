@@ -1,7 +1,8 @@
 const express = require('express');
 
 const app=express();
-app.use(express.static("views/partials/"));
+app.use(express.static("public"));
+app.set("view engine", "ejs");
 app.get('/',(req,res)=>res.send('Hi there, welcome to my assignment!'))
 
 app.get("/file/:thing", function(req,res){
@@ -23,7 +24,7 @@ app.get('/repeat/:word/:num/', function(req,res){
 	var sub=req.params.word;
 	var numb=Number(req.params.num);
 	var subR=sub;
-	for (var i =numb - 1; i >= 0; i--){
+	for (var i =numb - 1; i > 0; i--){
 		subR = subR + " " + sub;
 	}
 	res.send(subR + " ");
