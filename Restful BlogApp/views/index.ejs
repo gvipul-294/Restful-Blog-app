@@ -11,7 +11,7 @@
 	<br>
 	<span> <%= blog.created %> </span>
 	<br>
-	<p> <%= blog.body %> </p>
+	<p> <%= blog.body.substring(0, 100) %> </p>
 	<a href="/blogs/<%= blog._id %>">Read More</a>
 </div>
 <% }) %>
