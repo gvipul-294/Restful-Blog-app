@@ -9,3 +9,6 @@ i.icon {
 .index{
 	margin-top: 3em;
 }
+#delete{
+	display: inline;
+}
